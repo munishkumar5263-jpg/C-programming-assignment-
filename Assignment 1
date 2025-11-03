@@ -41,3 +41,101 @@ numbers[i]);
 18 + 40
 
         }
+//Question 2-what do you mean by functions? write the types of functions and give one example in code of each type.
+// Answer.
+#include <stdio.h>
+
+void greet() {
+    printf("Hello, World!\n");
+}
+
+int main() {
+    greet();
+    return 0;
+}
+     #include <stdio.h>
+
+        void greet() { // No arguments, void return type
+            printf("Hello from a user-defined function!\n");
+        }
+
+      int main() {
+            greet(); // Calling the function
+            return 0;
+        }
+     #include <stdio.h>
+
+        int getNumber() { // No arguments, returns an integer
+            return 50;
+        }
+
+       int main() {
+            int myNum = getNumber(); // Calling the function and storing its return value
+            printf("The number is: %d\n", myNum);
+            return 0; 
+        }
+
+//question 3- what do you mean by pointers? write a code how you can initialise the pointer.
+// Answer 3.
+#include <stdio.h>
+
+int main() {
+    int num = 10;       // Declare an integer variable 'num'
+    int *ptr = &num;    // Declare a pointer 'ptr' and initialize it with the address of 'num'
+    int *null_ptr = NULL;  // Initialize a pointer to NULL
+    
+    printf("The value of num is: %d\n", num);
+    printf("The address of num is: %p\n", &num);
+    printf("The value of the pointer ptr is (address of num): %p\n", ptr);
+    printf("The value at the address pointed to by ptr is: %d\n", *ptr);
+    
+    // Changing the value of num through the pointer
+    *ptr = 25;
+    printf("\nAfter changing the value through the pointer, num is now: %d\n", num);
+    
+    return 0;
+}
+Explanation of the code:
+int num = 10; declares a normal integer variable named num and assigns it the value 10.
+int *ptr = &num; declares a pointer variable ptr that can hold the address of an integer. The & operator is used to get the memory address of num, and this address is assigned to ptr.
+*ptr = 25; uses the dereference operator (*) to access the value at the address stored in ptr and changes it to 25. This, in turn, changes the value of num.
+
+//question 4-what are the type of array? write in a code 1D & 2D include.
+//Answer 4.
+#include <stdio.h>
+
+int main() {
+    // 1D Array Example
+    int oneDArray[5] = {10, 20, 30, 40, 50};
+    printf("One-Dimensional Array Elements:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", oneDArray[i]);
+    }
+    printf("\n\n");
+
+    // 2D Array Example
+    int twoDArray[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    printf("Two-Dimensional Array Elements:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", twoDArray[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+//question 5- what are the type of operators in code.
+// Answer 5.
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 5;
+    printf("a + b = %d\n", a + b); // Addition
+    printf("a - b = %d\n", a - b); // Subtraction
+    printf("a * b = %d\n", a * b); // Multiplication
+    printf("a / b = %d\n", a / b); // Division
+    printf("a %% b = %d\n", a % b); // Modulus
+    return 0;
+}
